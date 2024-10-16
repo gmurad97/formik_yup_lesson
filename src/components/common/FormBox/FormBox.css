@@ -1,0 +1,51 @@
+.form__box {
+    position: relative;
+    width: 384px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.form__box::before {
+    content: "";
+    position: absolute;
+    inset: -100%;
+    background-image: conic-gradient(#fc5c65, #fd9644, #fed330, #26de81, #2bcbba, #a55eea, #45aaf2);
+    filter: blur(32px);
+    animation: rotateGradient 4096ms linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotateGradient {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.form__box-content {
+    position: absolute;
+    inset: 4px;
+    background-color: #1e272e;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+.form__box-content-heading {
+    width: 100%;
+    height: auto;
+    padding: 8px 0px;
+}
+
+.form__box-content-heading-title {
+    font-size: 24px;
+    color: #10ac84;
+    text-align: center;
+}
